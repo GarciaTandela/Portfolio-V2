@@ -1,0 +1,41 @@
+//===== Text Type Mixins ====//
+@mixin text-title($font-family: $text-font-bold , $font-size: 20px, $text-color: $secondary-color ) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $text-color;
+}
+
+@mixin text-subtitle($font-family: $text-font-light , $font-size: 20px, $text-color: $ternary-color ) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $text-color;
+}
+
+@mixin text-description($font-family: $text-font-medium , $font-size: 14px, $text-color: $primary-color ) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $text-color;
+}
+
+@mixin text-list($font-family: $text-font-light , $font-size: 14px, $text-color: $primary-color ) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $text-color;
+}
+
+@mixin google-font ($font) {
+  $font: unquote($string: $font);
+  @import url(https://fonts.googleapis.com/css?family=#{$font});
+}

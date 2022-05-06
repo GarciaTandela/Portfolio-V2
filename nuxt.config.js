@@ -35,11 +35,7 @@ export default {
       { name: 'rating', content: 'General' }
     ],
     link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: 'https://d1msre04tvrc2c.cloudfront.net/static/favicon.ico'
-      },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon1.ico' },
       {
         rel: 'preload',
         href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons&display=swap',
@@ -61,6 +57,7 @@ export default {
   /*
    ** Global CSS
    */
+  css: ['@/assets/fonts/systemui.css', '@/assets/css/main.css'],
   plugins: [
     '~/plugins/Vuelidate',
     '~/plugins/Bus',
@@ -73,14 +70,20 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/vuetify'],
+  buildModules: [
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/vuetify',
+    '@nuxtjs/style-resources'
+  ],
   /*
-
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   vuetify: {
-    customVariables: ['~/assets/variables.scss']
+    customVariables: ['~/assets/scss/vuetify/variables.scss']
     // treeShake: true
+  },
+  styleResources: {
+    scss: ['~assets/scss/main.scss']
   },
   modules: [
     '@nuxtjs/axios',

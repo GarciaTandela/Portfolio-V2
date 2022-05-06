@@ -1,6 +1,6 @@
-# frontend
+# My personal portfolio V2
 
-> My majestic Nuxt.js project
+> Hello everyone visiting the second version of my personal portfolio, in this one there's a lot of change from performance and also new features implemented, i hope you enjoy it.
 
 ## Build Setup
 
@@ -18,5 +18,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
