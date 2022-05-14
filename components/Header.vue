@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar :elevation="0" color="#0a1930">
+  <v-app-bar elevate-on-scroll :height="75" fixed color="#0a1930">
     <nuxt-link class="ml-6" to="/">
       <v-img
         class="float-left"

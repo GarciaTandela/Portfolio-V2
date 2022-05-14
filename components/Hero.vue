@@ -1,5 +1,5 @@
 <template>
-  <v-row align="center">
+  <v-row class="mt-16" align="center">
     <v-col cols="6">
       <p class="compliment">HI THERE 👋🏼 I'M</p>
       <p class="name">Garcia Tandela</p>
