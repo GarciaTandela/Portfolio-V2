@@ -7,7 +7,7 @@
     tile
   >
     <v-row>
-      <v-col v-for="(Skill, key) in skills" :key="key" cols="2">
+      <v-col v-for="(Skill, key) in skills" :key="key" cols="4" sm="2" lg="2">
         <v-card-title>
           <template v-if="Skill.Type == 'icon'">
             <v-icon class="mx-auto" size="50" :color="Skill.Color">{{

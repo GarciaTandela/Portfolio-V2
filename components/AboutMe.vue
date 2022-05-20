@@ -1,7 +1,7 @@
 <template>
   <v-row class="py-3" justify="center">
     <v-col cols="12">
-      <p class="section-title text-center mt-3 mb-6">About Me</p>
+      <p class="section-title text-center mt-16 mb-6">About Me</p>
     </v-col>
     <div>
       <v-img
@@ -22,7 +22,7 @@
         </template>
       </v-img>
     </div>
-    <v-col class="mt-n3 ml-2" cols="6" xl="5">
+    <v-col class="mt-3 mt-lg-n3 ml-lg-2" cols="12" lg="6" xl="5">
       <p class="description text-justify">
         Hello, my name is Garcia Tandela (also known as Yannick), i'm a
         professional and talented Software Engineer that loves to face new

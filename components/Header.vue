@@ -1,7 +1,7 @@
 <template>
   <v-app-bar elevate-on-scroll :height="75" fixed color="#0a1930">
     <v-container>
-      <nuxt-link class="float-left" to="/">
+      <a class="float-left" @click="$vuetify.goTo('#home')">
         <v-img
           class="float-left"
           eager
@@ -20,15 +20,25 @@
           </template>
         </v-img>
         <span class="float-right mt-2 ml-3 logo-text">Garcia Tandela</span>
-      </nuxt-link>
+      </a>
 
       <v-spacer></v-spacer>
+      <v-btn
+        class="float-right hidden-lg-and-up"
+        icon
+        color="#a6b1cf"
+        dark
+        @click.stop="Drawer = !Drawer"
+      >
+        <v-icon>mdi-menu</v-icon>
+      </v-btn>
 
-      <div class="float-right">
+      <div class="float-right hidden-md-and-down">
         <v-btn
           class="nav-item text-capitalize ma-2 hidden-md-and-down"
           text
           :ripple="false"
+          @click="$vuetify.goTo('#about')"
         >
           About me
         </v-btn>
@@ -37,6 +47,7 @@
           class="nav-item text-capitalize ma-2 hidden-md-and-down"
           text
           :ripple="false"
+          @click="$vuetify.goTo('#service')"
         >
           My services
         </v-btn>
@@ -45,6 +56,7 @@
           class="nav-item text-capitalize ma-2 hidden-md-and-down"
           text
           :ripple="false"
+          @click="$vuetify.goTo('#skills')"
         >
           Skills
         </v-btn>
@@ -53,6 +65,7 @@
           class="nav-item text-capitalize ma-2 hidden-md-and-down"
           text
           :ripple="false"
+          @click="$vuetify.goTo('#portfolio')"
         >
           Portfolio
         </v-btn>
@@ -61,6 +74,7 @@
           class="nav-item text-capitalize ma-2 hidden-md-and-down"
           text
           :ripple="false"
+          @click="$vuetify.goTo('#testimonies')"
         >
           Testimonies
         </v-btn>
@@ -69,6 +83,7 @@
           class="nav-item text-capitalize ma-2 hidden-md-and-down"
           text
           :ripple="false"
+          @click="$vuetify.goTo('#contact')"
         >
           Contact
         </v-btn>
@@ -155,11 +170,21 @@
 </template>
 
 <script>
+import { createHelpers } from 'vuex-map-fields'
+const { mapFields } = createHelpers({
+  getterType: 'skill/getField',
+  mutationType: 'skill/updateField'
+})
 export default {
   data() {
     return {
       OrderBy: ''
     }
+  },
+  computed: {
+    ...mapFields({
+      Drawer: 'drawer'
+    })
   },
   methods: {
     goToPage() {

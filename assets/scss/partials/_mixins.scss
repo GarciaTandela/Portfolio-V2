@@ -35,6 +35,13 @@
   color: $text-color;
 }
 
+// ==== Responsive Mixins ====
+@mixin smartphone-screens() {
+  @media only screen and (max-width: 1263px) {
+    @content;
+  }
+}
+
 @mixin google-font ($font) {
   $font: unquote($string: $font);
   @import url(https://fonts.googleapis.com/css?family=#{$font});

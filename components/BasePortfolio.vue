@@ -1,11 +1,12 @@
 <template>
   <v-container>
-    <Hero></Hero>
-    <AboutMe></AboutMe>
-    <Services></Services>
-    <Skills></Skills>
-    <Portfolio></Portfolio>
-    <Testimonies></Testimonies>
+    <Hero id="home"></Hero>
+    <AboutMe id="about"></AboutMe>
+    <Services id="service"></Services>
+    <Skills id="skills"></Skills>
+    <Portfolio id="portfolio"></Portfolio>
+    <Testimonies id="testimonies"></Testimonies>
+    <Contact id="contact"></Contact>
   </v-container>
 </template>
 
@@ -16,7 +17,16 @@ import Services from './Services.vue'
 import Skills from './Skills.vue'
 import Portfolio from './Portfolio.vue'
 import Testimonies from './Testimonies.vue'
+import Contact from './Contact.vue'
 export default {
-  components: { Hero, AboutMe, Services, Skills, Portfolio, Testimonies }
+  components: {
+    Hero,
+    AboutMe,
+    Services,
+    Skills,
+    Portfolio,
+    Testimonies,
+    Contact
+  }
 }
 </script>

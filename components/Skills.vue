@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center">
+  <v-row>
     <v-col class="title-margin-top" cols="12">
       <p class="section-title text-center">Skills</p>
     </v-col>
@@ -8,7 +8,10 @@
         slider-color="#7be8d6"
         background-color="transparent"
         active-class="active-skill"
-        vertical
+        :vertical="!$vuetify.breakpoint.mobile"
+        :grow="$vuetify.breakpoint.mobile"
+        show-arrows
+        dark
       >
         <v-tab
           v-for="(Skill, key) in Skills"
@@ -108,6 +111,9 @@ export default {
 
 .title-margin-top {
   margin-top: 200px;
+  @include smartphone-screens() {
+    margin-top: 100px;
+  }
 }
 
 .skill-item {

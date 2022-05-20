@@ -1,9 +1,15 @@
 <template>
-  <v-row justify="center">
+  <v-row>
     <v-col class="title-margin-top" cols="12">
       <p class="section-title text-center">Portfolio</p>
     </v-col>
-    <v-col v-for="(Project, key) in Projects" :key="key" cols="4">
+    <v-col
+      v-for="(Project, key) in Projects"
+      :key="key"
+      cols="12"
+      sm="6"
+      lg="4"
+    >
       <v-hover v-slot="{ hover }">
         <v-card elevation="6" tile>
           <v-img
@@ -138,6 +144,9 @@ export default {
 
 .title-margin-top {
   margin-top: 200px;
+  @include smartphone-screens() {
+    margin-top: 100px;
+  }
 }
 
 .button-option {

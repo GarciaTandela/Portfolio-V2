@@ -292,5 +292,6 @@ export default () => ({
       Type: 'image',
       Color: ''
     }
-  ]
+  ],
+  drawer: null
 })

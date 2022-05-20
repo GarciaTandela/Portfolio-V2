@@ -51,3 +51,24 @@
   line-height: normal;
   letter-spacing: normal;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0a1930;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8891b0;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
