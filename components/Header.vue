@@ -237,7 +237,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@include google-font('Amatic+SC&display=swap');
 $logo-font: 'Amatic SC', cursive;
 
 .nav-item {

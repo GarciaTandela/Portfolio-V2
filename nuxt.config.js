@@ -41,6 +41,12 @@ export default {
         href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons&display=swap',
         as: 'font',
         onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: 'https://fonts.googleapis.com/css?family=Amatic+SC&display=swap',
+        as: 'font',
+        onload: "this.onload=null;this.rel='stylesheet'"
       }
     ]
   },
@@ -65,11 +71,69 @@ export default {
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/pwa'
   ],
   /*
    ** Nuxt.js modules
    */
+  pwa: {
+    meta: {
+      /* meta options */
+      theme_color: '#0a1930'
+    },
+    manifest: {
+      name: 'Garcia Tandela | Software Engineer',
+      short_name: 'GT Portfolio',
+      description: 'Garcia Tandela Personal Portfolio',
+      background_color: '#0a1930',
+      lang: 'en',
+      useWebmanifestExtension: false
+    },
+    workbox: {
+      offlineStrategy: 'StaleWhileRevalidate',
+      /* offlineAssets: ['/lang/.*'], */
+      enabled: true,
+      runtimeCaching: [
+        {
+          urlPattern: 'https://fonts.googleapis.com/.*',
+          handler: 'StaleWhileRevalidate'
+        },
+        {
+          urlPattern: 'https://img.icons8.com/.*',
+          handler: 'StaleWhileRevalidate'
+        },
+        {
+          urlPattern: 'https://images.ctfassets.net/.*',
+          handler: 'StaleWhileRevalidate'
+        },
+        {
+          urlPattern: 'https://d2.alternativeto.net/.*',
+          handler: 'StaleWhileRevalidate'
+        },
+        {
+          urlPattern: 'https://dashboard.snapcraft.io/.*',
+          handler: 'StaleWhileRevalidate'
+        },
+        {
+          urlPattern: 'https://pbs.twimg.com/.*',
+          handler: 'StaleWhileRevalidate'
+        },
+        {
+          urlPattern: 'https://d2eip9sf3oo6c2.cloudfront.net/.*',
+          handler: 'StaleWhileRevalidate'
+        },
+        {
+          urlPattern: 'https://thedeveloperworldisyours.com/.*',
+          handler: 'StaleWhileRevalidate'
+        },
+        {
+          urlPattern: 'https://media-exp1.licdn.com/.*',
+          handler: 'StaleWhileRevalidate'
+        }
+      ]
+    }
+  },
   vuetify: {
     customVariables: ['~/assets/scss/vuetify/variables.scss']
     // treeShake: true
@@ -79,7 +143,6 @@ export default {
   },
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
     '@nuxtjs/proxy',
     '@nuxtjs/robots',
     'nuxt-helmet',

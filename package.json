@@ -19,7 +19,6 @@
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/component-cache": "^1.1.6",
     "@nuxtjs/proxy": "^2.0.1",
-    "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "nanoid": "^2.1.11",
@@ -34,6 +33,7 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/style-resources": "^1.2.1",
     "@nuxtjs/vuetify": "^1.11.2",
     "babel-eslint": "^10.0.1",
