@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col class="title-margin-top" cols="12">
-      <p class="section-title text-center">Testimonies</p>
+      <p class="section-title text-center">{{ $t('Testimonies.Title') }}</p>
     </v-col>
     <v-col
       v-for="(Testimony, key) in Testimonies"
@@ -15,6 +15,7 @@
         elevation="6"
         :href="Testimony.Linkedin"
         target="_blank"
+        :max-height="400"
       >
         <v-card-text class="text-justify">
           <label class="description">
@@ -99,9 +100,8 @@ export default {
       Testimonies: [
         {
           Name: 'Cássio Brito',
-          Description:
-            'I have the opportunity to share the Viveendo Bem project with Garcia Tandela since the beginning, exactly 2 years ago. Great companion, with technical knowledge above the labor average. As CEO & Product Designer, I admire the potential to control and solve moments of high demand and pressure. It is undoubtedly a privilege for Viveendo Bem to have such a profile in our squad.',
-          Role: 'Product Designer at Banco Santander',
+          Description: this.$t('Testimonies.Cassio.Description'),
+          Role: this.$t('Testimonies.Cassio.Role'),
           Picture:
             'https://media-exp1.licdn.com/dms/image/C4D03AQEZwrDFogeh6A/profile-displayphoto-shrink_800_800/0/1643027191195?e=1658361600&v=beta&t=3yxp1mZ6GcOPjzvFONDH2e_N4UFFS5hOQ6qDjp9cvMc',
           CompanyLogo:
@@ -111,9 +111,8 @@ export default {
         },
         {
           Name: 'David Botella',
-          Description:
-            'Garcia Tandela is a great professional in the field of computing. After working on various projects. hand in hand, it is worth highlighting their great power of understanding, analysis and execution in each of their stages. Awesome Fullstack MEVN developer and analyst. He perfectly masters languages ​​such as JS, PHP. C#, as well as relational and non-relational databases.',
-          Role: 'Project Manager at Orizon',
+          Description: this.$t('Testimonies.David.Description'),
+          Role: this.$t('Testimonies.David.Role'),
           Picture:
             'https://media-exp1.licdn.com/dms/image/C4D03AQHxmx1rBAjmBQ/profile-displayphoto-shrink_800_800/0/1544395363790?e=1658361600&v=beta&t=r4r29VdpnbBsSjN4RoCkhGPQO5G4-Dh_P-H-7y2PsDw',
           CompanyLogo:
@@ -124,9 +123,8 @@ export default {
         },
         {
           Name: 'Adrián Garzón Gallardo',
-          Description:
-            'Garcia is an excellent professional. It was quite a discovery to meet him and I can affirm that he is one of the most decisive programmers I have ever worked with. its involvement in every aspect related to development and scalability as well as future repercussions of each action should be highlighted. A very involved, responsible, motivated professional with a great future ahead of him.',
-          Role: 'CEO & Founder at Highdatanet',
+          Description: this.$t('Testimonies.Adrian.Description'),
+          Role: this.$t('Testimonies.Adrian.Role'),
           Picture:
             'https://media-exp1.licdn.com/dms/image/C4E03AQFyN6ZtjvH8LQ/profile-displayphoto-shrink_800_800/0/1646731027735?e=1658361600&v=beta&t=fhAllXT_E425dDSAv6gmcE4lHg8lXtcDPjzkgtR583I',
           CompanyLogo:
@@ -137,9 +135,8 @@ export default {
         },
         {
           Name: 'Daniel Matos',
-          Description:
-            'Garcia is a super nice guy that I have the opportunity to share thoughts and solutions at Viveendo Bem. A very dedicated professional and always attentive to the smallest details. Full-stack with solid and advanced knowledge in NodeJs and VueJs. As a software development team supervisor, I give top marks for the simplicity and ease of explaining what to do down to the smallest detail.',
-          Role: 'FullStack Developer at Medicare',
+          Description: this.$t('Testimonies.Daniel.Description'),
+          Role: this.$t('Testimonies.Daniel.Role'),
           Picture:
             'https://media-exp1.licdn.com/dms/image/C4D03AQG515GtTsvAzw/profile-displayphoto-shrink_800_800/0/1587200901471?e=1658361600&v=beta&t=HPsAxbusDKFbH7jXpVGNOzSd8L0fLyGGrZRy8Cgkd60',
           CompanyLogo:
@@ -149,9 +146,8 @@ export default {
         },
         {
           Name: 'Deyson Santana',
-          Description:
-            'lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll',
-          Role: 'Comercial at Viveendo Bem',
+          Description: this.$t('Testimonies.Deyson.Description'),
+          Role: this.$t('Testimonies.Deyson.Role'),
           Picture:
             'https://media-exp1.licdn.com/dms/image/C4D03AQHlPfgxflimKg/profile-displayphoto-shrink_800_800/0/1615164341920?e=1658361600&v=beta&t=KYOFo6MgzsLBA-Wk_oJJrWVKytTMorl-jpa6fTwjrQE',
           CompanyLogo:
@@ -161,9 +157,8 @@ export default {
         },
         {
           Name: 'Adriano Santos',
-          Description:
-            'Garcia, a professional out of the box, dedicated and resilient. I have the opportunity to participate with him in a great project. With skills and full mastery in what develops the construction journey and the goals to be achieved are simple with its performance. He is always evolving and looking for excellence in what he does.',
-          Role: 'Cloud | SysAdmin | DevOps at UniFTC',
+          Description: this.$t('Testimonies.Adriano.Description'),
+          Role: this.$t('Testimonies.Adriano.Role'),
           Picture:
             'https://media-exp1.licdn.com/dms/image/C4D03AQH6siK40N069g/profile-displayphoto-shrink_800_800/0/1589061885665?e=1658361600&v=beta&t=5UFySIhEJ6Z6qPMoTYPUCl1N3hBET8iGamuSfQ8xTw4',
           CompanyLogo:
@@ -172,6 +167,18 @@ export default {
           Linkedin: 'https://www.linkedin.com/in/adriano-santos-91228921/'
         }
       ]
+    }
+  },
+  computed: {
+    calculateHeight() {
+      if (
+        this.$t('Header.Locale') === 'en' ||
+        this.$t('Header.Locale') === 'es'
+      ) {
+        return 290
+      }
+
+      return 330
     }
   }
 }

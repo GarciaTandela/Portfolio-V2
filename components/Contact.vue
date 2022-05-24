@@ -1,14 +1,13 @@
 <template>
   <v-row class="mb-12" justify="center">
     <v-col class="title-margin-top" cols="12">
-      <p class="section-title text-center">Contact</p>
+      <p class="section-title text-center">{{ $t('Contact.Title') }}</p>
     </v-col>
     <v-col cols="12" lg="6">
       <v-card color="transparent" flat>
         <v-card-text>
           <p class="contact-description text-justify">
-            Do you want to hire me, talk about a project or rquest one of my
-            services ? Don't hesitate to contact me using the form below:
+            {{ $t('Contact.Description1') }}
           </p>
           <v-form @submit.prevent="sendMessage">
             <v-text-field
@@ -19,7 +18,7 @@
               :height="48"
               :error-messages="NameErrors"
               :disabled="isLoading"
-              placeholder="Name"
+              :placeholder="$t('Contact.Name')"
               @keyup.enter="sendMessage"
               @input="$v.Name.$touch()"
               @blur="$v.Name.$touch()"
@@ -36,7 +35,7 @@
               :height="48"
               :error-messages="EmailErrors"
               :disabled="isLoading"
-              placeholder="Email"
+              :placeholder="$t('Contact.Email')"
               @keyup.enter="sendMessage"
               @input="$v.Email.$touch()"
               @blur="$v.Email.$touch()"
@@ -52,7 +51,7 @@
               :counter="1000"
               :error-messages="MessageErrors"
               :disabled="isLoading"
-              placeholder="Your message"
+              :placeholder="$t('Contact.Message')"
               @keyup.enter="sendMessage"
               @input="$v.Message.$touch()"
               @blur="$v.Message.$touch()"
@@ -66,11 +65,11 @@
               outlined
               :loading="isLoading"
               @click="sendMessage"
-              >Send message</v-btn
+              >{{ $t('Contact.Button') }}</v-btn
             >
           </v-form>
           <p class="contact-description mt-6">
-            or use some of my social media in the footer:
+            {{ $t('Contact.Description2') }}
           </p>
         </v-card-text>
       </v-card>
@@ -111,26 +110,26 @@ export default {
     NameErrors() {
       const errors = []
       if (!this.$v.Name.$dirty) return errors
-      !this.$v.Name.required && errors.push('O nome é obrigatório.')
-      !this.$v.Name.minLength &&
-        errors.push('O nome deve ter no mínimo 5 caracteres.')
+      !this.$v.Name.required && errors.push(this.$t('Contact.RequiredName'))
+      !this.$v.Name.minLength && errors.push(this.$t('Contact.NameMinLength'))
       return errors
     },
     EmailErrors() {
       const errors = []
       if (!this.$v.Email.$dirty) return errors
-      !this.$v.Email.required && errors.push('O email é obrigatório.')
-      !this.$v.Email.email && errors.push('Insira um email válido.')
+      !this.$v.Email.required && errors.push(this.$t('Contact.RequiredEmail'))
+      !this.$v.Email.email && errors.push(this.$t('Contact.ValidEmail'))
       return errors
     },
     MessageErrors() {
       const errors = []
       if (!this.$v.Message.$dirty) return errors
-      !this.$v.Message.required && errors.push('A mensagem é obrigatório.')
+      !this.$v.Message.required &&
+        errors.push(this.$t('Contact.RequiredMessage'))
       !this.$v.Message.minLength &&
-        errors.push('A mensagem deve ter no mínimo 10 caracteres.')
+        errors.push(this.$t('Contact.MessageMinLength'))
       !this.$v.Message.maxLength &&
-        errors.push('A mensagem deve ter no máximo 1000 caracteres.')
+        errors.push(this.$t('Contact.MessageMaxLength'))
       return errors
     }
   },
@@ -152,14 +151,13 @@ export default {
           this.Message = ''
           this.isLoading = false
           this.MesssageType = 'success'
-          this.MessageInfo = 'Mensagem enviada com sucesso.'
+          this.MessageInfo = this.$t('Contact.Success')
           this.isActive = true
         } catch (error) {
           this.isLoading = false
           this.MesssageType = 'error'
           this.isActive = true
-          this.MessageInfo =
-            'Desculpe, não podemos realizar esta ação no momento. Por favor, tente novamente mais tarde.'
+          this.MessageInfo = this.$t('Contact.Failed')
         }
       }
     }

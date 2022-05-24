@@ -17,8 +17,8 @@
       </v-card-text>
       <v-card-text>
         <p class="footer-description">
-          Copyright © Garcia Tandela {{ new Date().getFullYear() }}. All rights
-          reserved.
+          {{ $t('Footer.Copyright') }} © Garcia Tandela
+          {{ new Date().getFullYear() }}. {{ $t('Footer.AllRights') }}
         </p>
       </v-card-text>
     </v-card>
@@ -27,30 +27,32 @@
 
 <script>
 export default {
-  data: () => ({
-    icons: [
-      {
-        name: 'mdi-email',
-        color: 'grey',
-        link: 'mailto:garciatandela@gmail.com'
-      },
-      {
-        name: 'mdi-linkedin',
-        color: 'blue',
-        link: 'https://www.linkedin.com/in/garcia-tandela-a329a8182'
-      },
-      {
-        name: 'mdi-github',
-        color: '#ffffff',
-        link: 'https://github.com/GarciaTandela'
-      },
-      {
-        name: 'mdi-whatsapp',
-        color: 'green',
-        link: 'https://api.whatsapp.com/send?phone=244951993217'
-      }
-    ]
-  })
+  data() {
+    return {
+      icons: [
+        {
+          name: 'mdi-email',
+          color: 'grey',
+          link: 'mailto:garciatandela@gmail.com'
+        },
+        {
+          name: 'mdi-linkedin',
+          color: 'blue',
+          link: this.$t('Footer.Linkedin')
+        },
+        {
+          name: 'mdi-github',
+          color: '#ffffff',
+          link: 'https://github.com/GarciaTandela'
+        },
+        {
+          name: 'mdi-whatsapp',
+          color: 'green',
+          link: 'https://api.whatsapp.com/send?phone=244951993217'
+        }
+      ]
+    }
+  }
 }
 </script>
 

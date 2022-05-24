@@ -9,17 +9,18 @@
       order-sm="1"
       order-lg="1"
     >
-      <p class="compliment">HI THERE 👋🏼 I'M</p>
+      <p class="compliment">{{ $t('Hero.Title') }}</p>
       <p class="name">Garcia Tandela</p>
-      <p class="text-uppercase role">Software Engineer</p>
-      <p class="description">
-        I'm a professional with a full stack development skills<br
-          class="hidden-md-and-down"
-        />
-        based in Quebec.
-      </p>
-      <v-btn class="download-cv text-none mt-3" color="#7be8d6" outlined
-        >Download CV</v-btn
+      <p class="text-uppercase role">{{ $t('Hero.Role') }}</p>
+      <p class="description" v-html="Description"></p>
+      <v-btn
+        class="download-cv text-none mt-3"
+        color="#7be8d6"
+        :href="CV"
+        download="GarciaTandelaCV"
+        target="_blank"
+        outlined
+        >{{ $t('Hero.CV') }}</v-btn
       >
     </v-col>
     <v-col cols="12" sm="6" lg="6" order="1" order-sm="2" order-lg="2">
@@ -42,6 +43,38 @@
     </v-col>
   </v-row>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      Description: this.$t('Hero.Description'),
+      CVLink: ''
+    }
+  },
+  computed: {
+    CV() {
+      if (this.$t('Header.Locale') === 'en') {
+        return '/GarciaTandelaEN.pdf'
+      }
+
+      if (this.$t('Header.Locale') === 'es') {
+        return '/GarciaTandelaES.pdf'
+      }
+
+      if (this.$t('Header.Locale') === 'fr') {
+        return '/GarciaTandelaFR.pdf'
+      }
+
+      if (this.$t('Header.Locale') === 'pt') {
+        return '/GarciaTandelaPT.pdf'
+      }
+
+      return '/GarciaTandelaEN.pdf'
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .compliment {

@@ -41,6 +41,99 @@
           }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+
+      <v-list-group>
+        <template v-slot:activator>
+          <v-list-item-content>
+            <v-list-item-title class="nav-item">
+              {{ $t('Header.Language')
+              }}<span class="ml-3">{{
+                selectLanguage($t('Header.Locale'))
+              }}</span>
+              <img
+                v-show="$t('Header.Locale') === 'en'"
+                class="ml-2"
+                src="https://img.icons8.com/officexs/16/000000/usa.png"
+                alt="language-usa"
+              />
+              <img
+                v-show="$t('Header.Locale') === 'es'"
+                class="ml-2"
+                src="https://img.icons8.com/color/16/000000/spain.png"
+                alt="language-es"
+              />
+              <img
+                v-show="$t('Header.Locale') === 'fr'"
+                class="ml-2"
+                src="https://img.icons8.com/color/16/000000/france.png"
+                alt="language-fr"
+              />
+              <img
+                v-show="$t('Header.Locale') === 'pt'"
+                class="ml-2"
+                src="https://img.icons8.com/color/16/000000/portugal.png"
+                alt="language-pt"
+              />
+            </v-list-item-title>
+          </v-list-item-content>
+        </template>
+
+        <v-list-item class="ml-14" :to="switchLocalePath('en')">
+          <v-list-item-content>
+            <v-list-item-title class="nav-item">{{
+              $t('Header.English')
+            }}</v-list-item-title>
+          </v-list-item-content>
+          <v-list-item-icon>
+            <img
+              src="https://img.icons8.com/officexs/16/000000/usa.png"
+              alt="language-usa"
+            />
+          </v-list-item-icon>
+        </v-list-item>
+
+        <v-list-item class="ml-14" :to="switchLocalePath('es')">
+          <v-list-item-content>
+            <v-list-item-title class="nav-item">{{
+              $t('Header.Spanish')
+            }}</v-list-item-title>
+          </v-list-item-content>
+          <v-list-item-icon>
+            <img
+              src="https://img.icons8.com/color/16/000000/spain.png"
+              alt="language-es"
+            />
+          </v-list-item-icon>
+        </v-list-item>
+
+        <v-list-item class="ml-14" :to="switchLocalePath('fr')">
+          <v-list-item-content>
+            <v-list-item-title class="nav-item">{{
+              $t('Header.French')
+            }}</v-list-item-title>
+          </v-list-item-content>
+          <v-list-item-icon>
+            <img
+              src="https://img.icons8.com/color/16/000000/france.png"
+              alt="language-fr"
+            />
+          </v-list-item-icon>
+        </v-list-item>
+
+        <v-list-item class="ml-14" :to="switchLocalePath('pt')">
+          <v-list-item-content>
+            <v-list-item-title class="nav-item">{{
+              $t('Header.Portuguese')
+            }}</v-list-item-title>
+          </v-list-item-content>
+          <v-list-item-icon>
+            <img
+              src="https://img.icons8.com/color/16/000000/portugal.png"
+              alt="language-pt"
+            />
+          </v-list-item-icon>
+        </v-list-item>
+      </v-list-group>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -56,29 +149,34 @@ export default {
     return {
       navs: [
         {
-          title: 'About me',
+          title: this.$t('Header.AboutMe'),
           icon: 'mdi-information-variant',
           link: '#about'
         },
         {
-          title: 'My services',
+          title: this.$t('Header.MyServices'),
           icon: 'mdi-face-agent',
           link: '#service'
         },
         {
-          title: 'Skills',
+          title: this.$t('Header.Skills'),
           icon: 'mdi-cog-outline',
           link: '#skills'
         },
         {
-          title: 'Portfolio',
+          title: this.$t('Header.Portfolio'),
           icon: 'mdi-application-outline',
           link: '#portfolio'
         },
         {
-          title: 'Testimonies',
+          title: this.$t('Header.Testimonies'),
           icon: 'mdi-comment-account-outline',
           link: '#testimonies'
+        },
+        {
+          title: this.$t('Header.Contact'),
+          icon: 'mdi-account-box-outline',
+          link: '#contact'
         }
       ]
     }
@@ -89,6 +187,24 @@ export default {
     })
   },
   methods: {
+    selectLanguage(language) {
+      // eslint-disable-next-line no-console
+      if (language === 'en') {
+        return this.$t('Header.English')
+      }
+
+      if (language === 'es') {
+        return this.$t('Header.Spanish')
+      }
+
+      if (language === 'fr') {
+        return this.$t('Header.French')
+      }
+
+      if (language === 'pt') {
+        return this.$t('Header.Portuguese')
+      }
+    },
     goToSection(section) {
       this.$vuetify.goTo(section)
     }

@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col class="title-margin-top" cols="12">
-      <p class="section-title text-center">My services</p>
+      <p class="section-title text-center">{{ $t('MyServices.Title') }}</p>
     </v-col>
     <v-col
       v-for="(Service, key) in Services"
@@ -10,7 +10,12 @@
       sm="6"
       lg="3"
     >
-      <v-card color="#35455c" elevation="6" height="290" max-height="320">
+      <v-card
+        color="#35455c"
+        elevation="6"
+        :height="calculateHeight"
+        max-height="350"
+      >
         <v-card-subtitle class="mb-n5 text-center">
           <v-icon size="80" :color="Service.Color">{{
             Service.Icon
@@ -37,34 +42,50 @@ export default {
     return {
       Services: [
         {
-          Name: 'IT Consulting',
+          Name: this.$t('MyServices.Consulting.Title'),
           Icon: 'mdi-handshake',
-          Description:
-            'Outsourcing of strategic IT services, so that your company can benefit from specific technical IT specialties, which can assist in project planning, decision making and monitoring of all activities.',
+          Description: this.$t('MyServices.Consulting.Description'),
           Color: '#7be8d6'
         },
         {
-          Name: 'Web Development',
+          Name: this.$t('MyServices.Web.Title'),
           Icon: 'mdi-web',
-          Description:
-            'I develop sophisticated websites like Ecommerce, Blog, Web Applications and others for your company or product that will take your business to a different level.',
+          Description: this.$t('MyServices.Web.Description'),
           Color: '#e21f71'
         },
         {
-          Name: 'Mobile Development',
+          Name: this.$t('MyServices.Mobile.Title'),
           Icon: 'mdi-cellphone-cog',
-          Description:
-            'Have your own mobile app on all platforms (iOS and Android) so your customers can order your products or services wherever they go and share it with others.',
+          Description: this.$t('MyServices.Mobile.Description'),
           Color: '#fc6b06'
         },
         {
-          Name: 'Desktop Development',
+          Name: this.$t('MyServices.Desktop.Title'),
           Icon: 'mdi-monitor',
-          Description:
-            'It is essential to have an enterprise computer software in your company that is reliable, secure and manageable so that you can solve internal problems without difficulty.',
+          Description: this.$t('MyServices.Desktop.Description'),
           Color: '#00aeff'
         }
       ]
+    }
+  },
+  computed: {
+    calculateHeight() {
+      if (this.$vuetify.breakpoint.xl) {
+        return 270
+      }
+
+      if (this.$vuetify.breakpoint.mobile) {
+        return 280
+      }
+
+      if (
+        this.$t('Header.Locale') === 'en' ||
+        this.$t('Header.Locale') === 'es'
+      ) {
+        return 290
+      }
+
+      return 330
     }
   }
 }

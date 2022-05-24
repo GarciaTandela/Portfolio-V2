@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col class="title-margin-top" cols="12">
-      <p class="section-title text-center">Portfolio</p>
+      <p class="section-title text-center">{{ $t('Portfolio.Title') }}</p>
     </v-col>
     <v-col
       v-for="(Project, key) in Projects"
@@ -52,7 +52,7 @@
                       outlined
                       :href="Project.Website"
                       target="_blank"
-                      >Visit portfolio</v-btn
+                      >{{ $t('Portfolio.Visit') }}</v-btn
                     >
                     <v-btn
                       v-show="Project.SourceCode !== ''"
@@ -62,7 +62,7 @@
                       outlined
                       :href="Project.SourceCode"
                       target="_blank"
-                      >Source Code</v-btn
+                      >{{ $t('Portfolio.SourceCode') }}</v-btn
                     >
                   </v-row>
                 </section>
@@ -83,49 +83,43 @@ export default {
     return {
       Projects: [
         {
-          Title: 'Viveendo Bem',
-          Description:
-            'Viveendo Bem it is a real estate advertising platform that helps people to advertise and search for properties that meet their needs, offering several search options to make their lives easier.',
+          Title: this.$t('Portfolio.ViveendoBem.Title'),
+          Description: this.$t('Portfolio.ViveendoBem.Description'),
           Image: require('@/assets/files/ViveendoBem.png'),
           Website: 'https://viveendo.com.br',
           SourceCode: ''
         },
         {
-          Title: 'Highdata Clinic',
-          Description:
-            'Highdata Clinic is the first management program specialized in clinics, 100% in the cloud and with an Artificial Intelligence engine that helps you automate your day-to-day tasks and processes in the clinic.',
+          Title: this.$t('Portfolio.Clinic.Title'),
+          Description: this.$t('Portfolio.Clinic.Description'),
           Image: require('@/assets/files/Highdataclinic.png'),
           Website: 'https://www.highdataclinic.com/',
           SourceCode: ''
         },
         {
-          Title: 'HighdataNet',
-          Description:
-            'Highdatanet is a digital marketing agency based in Spain, Valencia that helps clients around the world to turn ideas into accomplishments, guaranteeing an excellent result from a technical point of view.',
+          Title: this.$t('Portfolio.Net.Title'),
+          Description: this.$t('Portfolio.Net.Description'),
           Image: require('@/assets/files/Highdatanet.png'),
           Website: 'https://highdatanet.com/',
           SourceCode: ''
         },
         {
-          Title: 'My Portfolio',
-          Description:
-            'Personal portfolio with information about some of my projects and goals.',
+          Title: this.$t('Portfolio.Personal.Title'),
+          Description: this.$t('Portfolio.Personal.Description'),
           Image: require('@/assets/files/Portfolio.png'),
           Website: 'https://garciatandela.com/',
           SourceCode: 'https://github.com/YannickSilva/Portfolio-V2'
         },
         {
-          Title: 'Paradise Hotel',
-          Description:
-            'Hotel website created for tourists (on vacation) and native people in my country.',
+          Title: this.$t('Portfolio.Hotel.Title'),
+          Description: this.$t('Portfolio.Hotel.Description'),
           Image: require('@/assets/files/HotelParaiso.png'),
           Website: 'https://paradisehotel.netlify.app/',
           SourceCode: 'https://github.com/YannickSilva/hotelparaiso'
         },
         {
-          Title: 'App Sketch',
-          Description:
-            'Sketch of a social network designed for cross mobile platform.',
+          Title: this.$t('Portfolio.Hooked.Title'),
+          Description: this.$t('Portfolio.Hooked.Description'),
           Image: require('@/assets/files/Hooked.png'),
           Website:
             'https://xd.adobe.com/view/0181d23e-181b-4499-5c37-ac9136b173b3-77b0/',

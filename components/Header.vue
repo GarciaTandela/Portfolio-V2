@@ -40,7 +40,7 @@
           :ripple="false"
           @click="$vuetify.goTo('#about')"
         >
-          About me
+          {{ $t('Header.AboutMe') }}
         </v-btn>
 
         <v-btn
@@ -49,7 +49,7 @@
           :ripple="false"
           @click="$vuetify.goTo('#service')"
         >
-          My services
+          {{ $t('Header.MyServices') }}
         </v-btn>
 
         <v-btn
@@ -58,7 +58,7 @@
           :ripple="false"
           @click="$vuetify.goTo('#skills')"
         >
-          Skills
+          {{ $t('Header.Skills') }}
         </v-btn>
 
         <v-btn
@@ -67,7 +67,7 @@
           :ripple="false"
           @click="$vuetify.goTo('#portfolio')"
         >
-          Portfolio
+          {{ $t('Header.Portfolio') }}
         </v-btn>
 
         <v-btn
@@ -76,7 +76,7 @@
           :ripple="false"
           @click="$vuetify.goTo('#testimonies')"
         >
-          Testimonies
+          {{ $t('Header.Testimonies') }}
         </v-btn>
 
         <v-btn
@@ -85,7 +85,7 @@
           :ripple="false"
           @click="$vuetify.goTo('#contact')"
         >
-          Contact
+          {{ $t('Header.Contact') }}
         </v-btn>
 
         <v-menu
@@ -103,17 +103,44 @@
               :ripple="false"
               v-on="on"
             >
-              Language: <span class="ml-6">{{ 'Inglês' }}</span>
+              {{ $t('Header.Language') }}
+              <span class="ml-1">{{
+                selectLanguage($t('Header.Locale'))
+              }}</span>
+              <img
+                v-show="$t('Header.Locale') === 'en'"
+                class="ml-2"
+                src="https://img.icons8.com/officexs/16/000000/usa.png"
+                alt="language-usa"
+              />
+              <img
+                v-show="$t('Header.Locale') === 'es'"
+                class="ml-2"
+                src="https://img.icons8.com/color/16/000000/spain.png"
+                alt="language-es"
+              />
+              <img
+                v-show="$t('Header.Locale') === 'fr'"
+                class="ml-2"
+                src="https://img.icons8.com/color/16/000000/france.png"
+                alt="language-fr"
+              />
+              <img
+                v-show="$t('Header.Locale') === 'pt'"
+                class="ml-2"
+                src="https://img.icons8.com/color/16/000000/portugal.png"
+                alt="language-pt"
+              />
             </v-btn>
           </template>
 
           <v-list>
             <v-list-item-group>
-              <v-list-item>
+              <v-list-item :to="switchLocalePath('en')">
                 <v-list-item-content>
-                  <v-list-item-title class="language-item"
-                    >Inglês</v-list-item-title
-                  >
+                  <v-list-item-title class="language-item">{{
+                    $t('Header.English')
+                  }}</v-list-item-title>
                 </v-list-item-content>
                 <v-list-item-icon>
                   <img
@@ -122,11 +149,11 @@
                   />
                 </v-list-item-icon>
               </v-list-item>
-              <v-list-item>
+              <v-list-item :to="switchLocalePath('es')">
                 <v-list-item-content>
-                  <v-list-item-title class="language-item"
-                    >Espanhol</v-list-item-title
-                  >
+                  <v-list-item-title class="language-item">{{
+                    $t('Header.Spanish')
+                  }}</v-list-item-title>
                 </v-list-item-content>
                 <v-list-item-icon>
                   <img
@@ -135,11 +162,11 @@
                   />
                 </v-list-item-icon>
               </v-list-item>
-              <v-list-item>
+              <v-list-item :to="switchLocalePath('fr')">
                 <v-list-item-content>
-                  <v-list-item-title class="language-item"
-                    >Francês</v-list-item-title
-                  >
+                  <v-list-item-title class="language-item">{{
+                    $t('Header.French')
+                  }}</v-list-item-title>
                 </v-list-item-content>
                 <v-list-item-icon>
                   <img
@@ -148,11 +175,11 @@
                   />
                 </v-list-item-icon>
               </v-list-item>
-              <v-list-item>
+              <v-list-item :to="switchLocalePath('pt')">
                 <v-list-item-content>
-                  <v-list-item-title class="language-item"
-                    >Português</v-list-item-title
-                  >
+                  <v-list-item-title class="language-item">{{
+                    $t('Header.Portuguese')
+                  }}</v-list-item-title>
                 </v-list-item-content>
                 <v-list-item-icon>
                   <img
@@ -187,9 +214,22 @@ export default {
     })
   },
   methods: {
-    goToPage() {
-      if (this.$route.fullPath === '/') {
-        this.$vuetify.goTo('#HumanTeam')
+    selectLanguage(language) {
+      // eslint-disable-next-line no-console
+      if (language === 'en') {
+        return this.$t('Header.English')
+      }
+
+      if (language === 'es') {
+        return this.$t('Header.Spanish')
+      }
+
+      if (language === 'fr') {
+        return this.$t('Header.French')
+      }
+
+      if (language === 'pt') {
+        return this.$t('Header.Portuguese')
       }
     }
   }

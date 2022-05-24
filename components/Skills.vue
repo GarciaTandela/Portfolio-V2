@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col class="title-margin-top" cols="12">
-      <p class="section-title text-center">Skills</p>
+      <p class="section-title text-center">{{ $t('Skills.Title') }}</p>
     </v-col>
     <v-col cols="12">
       <v-tabs

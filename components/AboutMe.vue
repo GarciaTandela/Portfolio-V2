@@ -1,7 +1,9 @@
 <template>
   <v-row class="py-3" justify="center">
     <v-col cols="12">
-      <p class="section-title text-center mt-16 mb-6">About Me</p>
+      <p class="section-title text-center mt-16 mb-6">
+        {{ $t('AboutMe.Title') }}
+      </p>
     </v-col>
     <div>
       <v-img
@@ -24,35 +26,38 @@
     </div>
     <v-col class="mt-3 mt-lg-n3 ml-lg-2" cols="12" lg="6" xl="5">
       <p class="description text-justify">
-        Hello, my name is Garcia Tandela (also known as Yannick), i'm a
-        professional and talented Software Engineer that loves to face new
-        challenges and develop solutions to help the world improve through
-        digital transformation.
+        {{ $t('AboutMe.Description1') }}
       </p>
       <p class="description text-justify">
-        Going to the present day i have had the privilege of working on projects
-        with companies around the world such as a
-        <span class="highlight-text">real estate startup</span>,
-        <span class="highlight-text">a digital marketing agency</span> and a
-        project for
-        <span class="highlight-text"
-          >managing clinics and client relationships (CRM) </span
-        >.
+        {{ $t('AboutMe.Description2') }}
+        <span class="highlight-text">{{ $t('AboutMe.Description3') }}</span
+        >, <span class="highlight-text">{{ $t('AboutMe.Description4') }}</span>
+        {{ $t('AboutMe.Description5') }}
+        <span class="highlight-text">{{ $t('AboutMe.Description6') }} </span>.
       </p>
       <p class="description text-justify">
-        Nowadays my main focus is to ensure that projects have a well defined
-        software architecture facilitating teamwork, maintenance, testing and
-        scalability because i love being able to be involved in the entire
-        process of a project dealing with
+        {{ $t('AboutMe.Description7') }}
         <span class="highlight-text">Frontend</span>,
         <span class="highlight-text">Backend</span>,
-        <span class="highlight-text">Database</span> and
-        <span class="highlight-text">DevOps</span> and also from is elaboration,
-        design and finalization.
+        <span class="highlight-text">Database</span>
+        {{ $t('AboutMe.Description8') }}
+        <span class="highlight-text">DevOps</span>
+        {{ $t('AboutMe.Description9') }}
       </p>
     </v-col>
   </v-row>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      Description2: this.$t('AboutMe.Description2'),
+      Description3: this.$t('AboutMe.Description3')
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .section-title {

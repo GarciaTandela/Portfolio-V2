@@ -58,15 +58,7 @@ export default {
    ** Global CSS
    */
   css: ['@/assets/fonts/systemui.css', '@/assets/css/main.css'],
-  plugins: [
-    '~/plugins/Vuelidate',
-    '~/plugins/Bus',
-    '~/plugins/mixins/Validation',
-    {
-      src: './plugins/axios-global-header.js',
-      mode: 'client'
-    }
-  ],
+  plugins: ['~/plugins/Vuelidate', '~/plugins/mixins/Validation'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -92,8 +84,41 @@ export default {
     '@nuxtjs/robots',
     'nuxt-helmet',
     '@nuxtjs/component-cache',
-    ['vue-scrollto/nuxt', { duration: 3000 }],
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            name: 'English',
+            code: 'en',
+            iso: 'en-US',
+            file: 'en-US.js'
+          },
+          {
+            name: 'Spanish',
+            code: 'es',
+            iso: 'es-SP',
+            file: 'es-SP.js'
+          },
+          {
+            name: 'French',
+            code: 'fr',
+            iso: 'fr-FR',
+            file: 'fr-FR.js'
+          },
+          {
+            name: 'Portuguese',
+            code: 'pt',
+            iso: 'pt-PT',
+            file: 'pt-PT.js'
+          }
+        ],
+        lazy: true,
+        langDir: 'lang/',
+        defaultLocale: 'en'
+      }
+    ]
   ],
   robots: {
     UserAgent: '*'
