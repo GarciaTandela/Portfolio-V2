@@ -4,9 +4,6 @@
   "description": "Garcia Tandela Personal Portfolio",
   "author": "Garcia Tandela",
   "private": true,
-  "engines": {
-    "node": "18.0.0"
-  },
   "scripts": {
     "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && nuxt",
     "build": "nuxt build",
