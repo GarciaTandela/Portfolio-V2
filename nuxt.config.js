@@ -1,7 +1,7 @@
 export default {
-  server: {
+  /* server: {
     port: 8000
-  },
+  }, */
   head: {
     title: 'Garcia Tandela | Software Engineer',
     meta: [
