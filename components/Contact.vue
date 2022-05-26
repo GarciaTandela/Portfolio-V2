@@ -141,9 +141,9 @@ export default {
         this.isLoading = true
         try {
           await this.$axios.$post('/api/sendmail', {
-            Name: this.Name,
-            Email: this.Email,
-            Message: this.Message
+            nome: this.Name,
+            email: this.Email,
+            message: this.Message
           })
           this.$v.$reset()
           this.Name = ''

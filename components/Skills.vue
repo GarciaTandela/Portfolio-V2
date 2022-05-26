@@ -17,6 +17,7 @@
           v-for="(Skill, key) in Skills"
           :key="key"
           class="text-none skill-item"
+          active-class="active-skill"
         >
           <v-icon left> {{ Skill.Icon }} </v-icon>
           {{ Skill.Name }}
@@ -121,13 +122,6 @@ export default {
 }
 
 .active-skill {
-  color: $ternary-color;
-}
-
-.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active),
-.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) > .v-icon,
-.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) > .v-btn,
-.theme--light.v-tabs > .v-tabs-bar .v-tab--disabled {
-  color: $primary-color;
+  color: $ternary-color !important;
 }
 </style>
