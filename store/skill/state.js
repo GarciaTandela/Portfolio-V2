@@ -77,6 +77,42 @@ export default () => ({
       Src: 'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-app-new-media-flaticons-lineal-color-flat-icons-2.png',
       Type: 'image',
       Color: ''
+    },
+    {
+      Name: 'React JS',
+      Src: 'mdi-react',
+      Type: 'icon',
+      Color: 'blue'
+    },
+    {
+      Name: 'Next JS',
+      Src: 'https://www.rlogical.com/wp-content/uploads/2021/08/Rlogical-Blog-Images-thumbnail.png',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'Gastby JS',
+      Src: 'mdi-gatsby',
+      Type: 'icon',
+      Color: 'purple'
+    },
+    {
+      Name: 'Quasar JS',
+      Src: 'https://cdn.quasar.dev/logo-v2/svg/logo.svg',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'Storybook',
+      Src: 'https://www.svgrepo.com/show/354396/storybook.svg',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'Asp.Net Blazor',
+      Src: 'https://img.icons8.com/color/48/net-framework.png',
+      Type: 'image',
+      Color: ''
     }
   ],
   BackendSkills: [
@@ -157,6 +193,24 @@ export default () => ({
       Src: 'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-flowchart-ux-and-ui-icons-flaticons-lineal-color-flat-icons-2.png',
       Type: 'image',
       Color: ''
+    },
+    {
+      Name: 'Asp.Net Web API',
+      Src: 'https://img.icons8.com/color/48/net-framework.png',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'Entity Framework',
+      Src: 'https://img.icons8.com/color/48/net-framework.png',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'Nest JS',
+      Src: 'https://www.vectorlogo.zone/logos/nestjs/nestjs-ar21.svg',
+      Type: 'image',
+      Color: ''
     }
   ],
   MobileSkills: [
@@ -183,6 +237,24 @@ export default () => ({
       Src: 'https://img.icons8.com/color/48/000000/ionic.png',
       Type: 'image',
       Color: ''
+    },
+    {
+      Name: 'React Native',
+      Src: 'mdi-react',
+      Type: 'icon',
+      Color: 'blue'
+    },
+    {
+      Name: 'Flutter',
+      Src: 'https://img.icons8.com/color/48/flutter.png',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'NET MAUI',
+      Src: 'https://img.icons8.com/color/48/net-framework.png',
+      Type: 'image',
+      Color: ''
     }
   ],
   DatabaseSkills: [
@@ -207,6 +279,24 @@ export default () => ({
     {
       Name: 'IndexedDB',
       Src: 'https://img.icons8.com/clouds/100/000000/database.png',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'SQL Server',
+      Src: 'https://img.icons8.com/color/48/microsoft-sql-server.png',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'SQL Lite',
+      Src: 'https://img.icons8.com/parakeet/48/database.png',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'Postgre',
+      Src: 'https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-postgre-sql-a-free-and-open-source-relational-database-management-system-logo-shadow-tal-revivo.png',
       Type: 'image',
       Color: ''
     }
@@ -269,6 +359,24 @@ export default () => ({
     {
       Name: 'Mongo Atlas',
       Src: 'https://img.icons8.com/color/48/000000/mongodb.png',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'Digital Ocean',
+      Src: 'https://img.icons8.com/windows/48/339AF0/digital-ocean.png',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'RabbitMQ',
+      Src: 'https://img.icons8.com/ios-filled/48/FCC419/rabbit.png',
+      Type: 'image',
+      Color: ''
+    },
+    {
+      Name: 'MQTT',
+      Src: 'https://img.icons8.com/external-ddara-lineal-ddara/48/339AF0/external-speed-real-time-cloud-information-computing-process-cloud-computing-ddara-lineal-ddara.png',
       Type: 'image',
       Color: ''
     }

@@ -128,7 +128,7 @@ export default {
           handler: 'StaleWhileRevalidate'
         },
         {
-          urlPattern: 'https://media-exp1.licdn.com/.*',
+          urlPattern: 'https://media.licdn.com/.*',
           handler: 'StaleWhileRevalidate'
         }
       ]
@@ -214,7 +214,7 @@ export default {
     extend(config, ctx) {}
   },
   sitemap: {
-    hostname: 'https://garciatandela.com',
+    hostname: 'https://garciatandela.info',
     gzip: true
   }
 }
