@@ -19,7 +19,7 @@ export default {
     Description: `Soy un profesional con habilidades de desarrollo de pila completa<br
     class="hidden-md-and-down"
   />
-  con sede en Luanda.`,
+  con sede en Porto.`,
     CV: 'Descargar currículum'
   },
   AboutMe: {

@@ -103,9 +103,9 @@ export default {
           Description: this.$t('Testimonies.Cassio.Description'),
           Role: this.$t('Testimonies.Cassio.Role'),
           Picture:
-            'https://media.licdn.com/dms/image/C4D03AQEZwrDFogeh6A/profile-displayphoto-shrink_800_800/0/1643027191195?e=1689811200&v=beta&t=bmlKGuvR7FyeR5InLv5mnn1yBvwHDOu3mTGt0OjFNVc',
+            'https://media.licdn.com/dms/image/v2/C4D03AQEZwrDFogeh6A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1643027191634?e=1730332800&v=beta&t=mgh7ujNib1MrzKX4gzojgkWMi7cgIbB8dquwe5nSfg4',
           CompanyLogo:
-            'https://media.licdn.com/dms/image/C4E0BAQFP8mEoq70MFA/company-logo_200_200/0/1656922771497?e=1692835200&v=beta&t=BxdfMR2aY9B8dSnWo-X4xkfcHjz7PJ_fjPjU9oZ48xg',
+            'https://media.licdn.com/dms/image/v2/D4D0BAQGVRxhl9ugIOA/company-logo_200_200/company-logo_200_200/0/1719830522728/banco_santander_logo?e=1732752000&v=beta&t=rF5ym3Wxp7rZj5CcdfUmhthchXyocMkrPnxtKHAfX3Q',
           CompanyName: 'Banco Santander',
           Linkedin: 'https://www.linkedin.com/in/cassio-brito/'
         },
@@ -114,9 +114,9 @@ export default {
           Description: this.$t('Testimonies.David.Description'),
           Role: this.$t('Testimonies.David.Role'),
           Picture:
-            'https://media.licdn.com/dms/image/C4D03AQHxmx1rBAjmBQ/profile-displayphoto-shrink_400_400/0/1544395363790?e=1689811200&v=beta&t=XA5AZ-zCVQ4m2talE2F71ra4LJUpewaFQaDcnKi4REY',
+            'https://media.licdn.com/dms/image/v2/C4D03AQHxmx1rBAjmBQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1544395364700?e=1730332800&v=beta&t=P9GU9KUQShnuoos_R0AslpB_1qtr-vkGVJZ4mlDg4N4',
           CompanyLogo:
-            'https://media.licdn.com/dms/image/C4E0BAQFOLJOk0i4w-A/company-logo_200_200/0/1678891282018?e=1692835200&v=beta&t=kbbVA1GZj64wUBoMNyO-sCQeHBnGBS64QUO4DpVPMmY',
+            'https://media.licdn.com/dms/image/v2/D560BAQEA8d3x7q2geQ/company-logo_200_200/company-logo_200_200/0/1695740388699/orizon_sistemas_de_informaci_n_s_l__logo?e=1732752000&v=beta&t=SEIGBUzp3acU06HgeSxC9jM-8U8BPTAVj1Nwn6VCMXM',
           CompanyName: 'Orizon',
           Linkedin:
             'https://www.linkedin.com/in/david-botella-de-las-heras-42aa70159/'
@@ -126,9 +126,9 @@ export default {
           Description: this.$t('Testimonies.Adrian.Description'),
           Role: this.$t('Testimonies.Adrian.Role'),
           Picture:
-            'https://media.licdn.com/dms/image/C4E03AQFyN6ZtjvH8LQ/profile-displayphoto-shrink_400_400/0/1646731027735?e=1689811200&v=beta&t=HCZU1FS6Lu5BBi5A7yczEEaJWDPUck-9MJZI7Wz07p4',
+            'https://media.licdn.com/dms/image/v2/D4D03AQGd1lCNCn2-Tg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1724313328080?e=1730332800&v=beta&t=hm3Vge9DbVYJXLMVuugacfDFkxY9XpDY3yb8V9n5AS0',
           CompanyLogo:
-            'https://media.licdn.com/dms/image/C4E0BAQH2OfkuKz2v5g/company-logo_200_200/0/1676141850426?e=1692835200&v=beta&t=24vlARtbmQTX5wPl9xkBODta03tQSVM8eVgG4ZtZ_sY',
+            'https://media.licdn.com/dms/image/v2/C4E0BAQH2OfkuKz2v5g/company-logo_200_200/company-logo_200_200/0/1676141850741/highdatanet_logo?e=1732752000&v=beta&t=wczNHYAystMCpqDYbKLjposBDqPJzev3SVANaazOi7A',
           CompanyName: 'Highdatanet',
           Linkedin:
             'https://www.linkedin.com/in/adri%C3%A1n-garz%C3%B3n-gallardo-14652b146/'
@@ -138,9 +138,9 @@ export default {
           Description: this.$t('Testimonies.Daniel.Description'),
           Role: this.$t('Testimonies.Daniel.Role'),
           Picture:
-            'https://media.licdn.com/dms/image/D4D03AQH1fFUl6nQiyA/profile-displayphoto-shrink_400_400/0/1673529719365?e=1689811200&v=beta&t=4J03RyKSqgdOhsNny0O0HuccZojT-BUxwGf4NJYq_jU',
+            'https://media.licdn.com/dms/image/v2/D4D03AQGmAZLvkUOCiw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1722793849215?e=1730332800&v=beta&t=WAkwHfnKnkr5GXdMTUCv9Ol2grqTepVOH-d1n7Ulv6U',
           CompanyLogo:
-            'https://media.licdn.com/dms/image/C560BAQGJZE5V9oKmAg/company-logo_200_200/0/1652282293141?e=1692835200&v=beta&t=Jl_9Mz7JJKOhxSuOmHqF3dFZn4TK7E-9FcES-mo2W98',
+            'https://media.licdn.com/dms/image/v2/C560BAQGJZE5V9oKmAg/company-logo_200_200/company-logo_200_200/0/1652282293878?e=1732752000&v=beta&t=KEHmUzbwev357bR_iHWShRqsG2wgfz9BJSOwQos7dDI',
           CompanyName: 'Medicare',
           Linkedin: 'https://www.linkedin.com/in/daniel-matos-63b096130/'
         },
@@ -149,9 +149,9 @@ export default {
           Description: this.$t('Testimonies.Deyson.Description'),
           Role: this.$t('Testimonies.Deyson.Role'),
           Picture:
-            'https://media.licdn.com/dms/image/D4D03AQH4JLPH7A_Qrw/profile-displayphoto-shrink_400_400/0/1684201533522?e=1689811200&v=beta&t=nk0Toh1BshgaN_CqGtv9tPDUUw0RaWZJCa_SkVFGnyw',
+            'https://media.licdn.com/dms/image/v2/D4D03AQH4JLPH7A_Qrw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684201534451?e=1730332800&v=beta&t=nsQhjPxZUx1lpaqheCtNYl899fUV9lzf5lLaFmWJ3bM',
           CompanyLogo:
-            'https://media.licdn.com/dms/image/C4D0BAQEuMl0YuhXeaA/company-logo_200_200/0/1599588212232?e=1692835200&v=beta&t=NWRhM2lRIdjGKv9banpgHP0UUHQyOhaBcLHTTdiGqI0',
+            'https://media.licdn.com/dms/image/v2/C4D0BAQEuMl0YuhXeaA/company-logo_200_200/company-logo_200_200/0/1630552209333/viveendo_logo?e=1732752000&v=beta&t=IY9LsJiyVlFuFbqNLz0BUr0Q2jDzsHuB_7OsMiKbsI0',
           CompanyName: 'Viveendo Bem',
           Linkedin: 'https://www.linkedin.com/in/deyson-santana-b4322a149/'
         },
@@ -160,9 +160,9 @@ export default {
           Description: this.$t('Testimonies.Adriano.Description'),
           Role: this.$t('Testimonies.Adriano.Role'),
           Picture:
-            'https://media.licdn.com/dms/image/C4D03AQH6siK40N069g/profile-displayphoto-shrink_400_400/0/1589061885665?e=1689811200&v=beta&t=vLhpUpY2sK-DPYU1UadpWVIsrsYeX_V9RFL8KxJXiOw',
+            'https://media.licdn.com/dms/image/v2/D4D03AQGKrvGVIi9FlA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1701712838441?e=1730332800&v=beta&t=IVyJrWF4kCuXbmlK6PrS8C_netQJkUyCkqLOBL5EOkw',
           CompanyLogo:
-            'https://media.licdn.com/dms/image/C4E0BAQGkQsm5svygvA/company-logo_200_200/0/1578411059070?e=1692835200&v=beta&t=icgxA-RXKT2q2L7SgOQ6kT58cdB1wgz1ctR0Px6917I',
+            'https://media.licdn.com/dms/image/v2/C4E0BAQGkQsm5svygvA/company-logo_200_200/company-logo_200_200/0/1630570943696/uniftc_logo?e=1732752000&v=beta&t=dg1VTe0g23CV3t-_GVZZgPVnMMj5stSbSGF3CGc_Prg',
           CompanyName: 'UniFTC',
           Linkedin: 'https://www.linkedin.com/in/adriano-santos-91228921/'
         }

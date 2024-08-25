@@ -19,7 +19,7 @@ export default {
     Description: `Je suis un professionnel avec des compétences en développement<br
     class="hidden-md-and-down"
   />
-  full stack basé à Luanda.`,
+  full stack basé à Porto.`,
     CV: 'Télécharger CV'
   },
   AboutMe: {

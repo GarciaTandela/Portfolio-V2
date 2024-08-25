@@ -48,7 +48,7 @@ export default {
         {
           name: 'mdi-whatsapp',
           color: 'green',
-          link: 'https://api.whatsapp.com/send?phone=244951993217'
+          link: 'https://api.whatsapp.com/send?phone=244926920530'
         }
       ]
     }
